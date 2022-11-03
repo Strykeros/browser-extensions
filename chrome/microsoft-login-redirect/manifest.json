@@ -1,0 +1,17 @@
+{
+    "name": "Microsoft Login Auto Redirect",
+    "manifest_version": 3,
+    "version": "0.1",
+    "description": "Auto Redirect MS login.",
+    "page_action": {
+        "default_icon": "/images/addon_ico.png"
+    },
+    "content_scripts":[{
+        "matches": ["https://login.microsoftonline.com/*", "https://mysignins.microsoft.com/*"],
+        "js": ["main.js"]
+    }],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
+  }

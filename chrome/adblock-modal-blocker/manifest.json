@@ -1,0 +1,18 @@
+{
+    "name": "Remove modals",
+    "manifest_version": 3,
+    "version": "0.1",
+    "description": "Auto close unwanted modals.",
+    "page_action": {
+        "default_icon": "/images/addon_ico.png"
+    },
+    "content_scripts":[{
+        "matches": ["https://inbox.lv/*", "https://*.inbox.lv/*", "https://twitter.com/*"],
+        "js": ["main.js"],
+        "css": ["style.css"]
+    }],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
+  }

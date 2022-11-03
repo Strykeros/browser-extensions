@@ -1,0 +1,14 @@
+{
+    "name": "Remove_anti-adblock_modal",
+    "action": {},
+    "manifest_version": 2,
+    "version": "0.1",
+    "description": "Auto close adblock modal.",
+    "page_action": {
+        "default_icon": "/images/addon_ico.png"
+    },
+    "content_scripts":[{
+        "matches": ["https://inbox.lv/*", "https://*.inbox.lv/*", "https://twitter.com/*"],
+        "js": ["main.js"]
+    }]
+  }
